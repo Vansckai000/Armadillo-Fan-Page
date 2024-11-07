@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armadillo Fan Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Armadillo Fan Page!</h1>
+        <p>Discover the Amazing World of the Nine-Banded Armadillo</p>
+    </header>
+
+    <main>
+        <div class="tabs">
+            <div class="tab active" data-tab="eating" onclick="openTab('eating')">Eating Habits</div>
+            <div class="tab" data-tab="habitat" onclick="openTab('habitat')">Where They Live</div>
+            <div class="tab" data-tab="lifecycle" onclick="openTab('lifecycle')">Life Cycle</div>
+            <div class="tab" data-tab="Why I love armadillos" onclick="openTab('Why I love armadillos')">Why I Love Armadillos</div>
+        </div>
+
+        <div id="eating" class="tab-content active">
+            <h2>Eating Habits</h2>
+            <img src="armadillo-pizza.jpg" alt="Armadillo with a slice of pizza" class="image">
+            <ul>
+                <li><strong>Nighttime Foragers:</strong> Armadillos are nocturnal, searching for food at night using a strong sense of smell.</li>
+                <li><strong>Diet:</strong> They primarily eat insects, grubs, and other small invertebrates, but occasionally consume fruits and plants.</li>
+                <li><strong>Sticky Tongue:</strong> Their tongues are long and sticky, enabling them to capture and consume insects effectively.</li>
+            </ul>
+        </div>
+
+        <div id="habitat" class="tab-content">
+            <h2>Where They Live</h2>
+            <img src="armadillo-range-map.png" alt="Range map of the nine-banded armadillo" class="image">
+            <ul>
+                <li><strong>Burrow Dwellers:</strong> Nine-banded armadillos dig extensive burrows, sometimes up to 15 feet long with multiple entrances.</li>
+                <li><strong>Warm Regions:</strong> They thrive in warm climates and are commonly found in the southern U.S., Central America, and South America.</li>
+                <li><strong>Adaptability:</strong> These armadillos can be found in forests, grasslands, and sometimes suburban areas.</li>
+            </ul>
+        </div>
+
+        <div id="lifecycle" class="tab-content">
+            <h2>Life Cycle</h2>
+            <img src="hairy-armadillo.webp" alt="Hairy armadillo" class="image">
+            <ul>
+                <li><strong>Reproduction:</strong> Nine-banded armadillos are known for giving birth to identical quadruplets.</li>
+                <li><strong>Lifespan:</strong> In the wild, they typically live between 7 and 20 years, depending on conditions and predation.</li>
+                <li><strong>Growth:</strong> Young armadillos grow quickly and are ready to leave the burrow within a few months.</li>
+            </ul>
+        </div>
+
+        <div id="Why I love armadillos" class="tab-content">
+            <h2>Why I Love Armadillos</h2>
+            <img src="Stuffy.jpg" alt="Stuffed Armadillo" class="image" style="width: 40%; height: auto;">
+            <ul>
+                <li><strong>Stuffed Animal:</strong> I had a stuffed animal given to me by my aunt when I was little.</li>
+                <li><strong>Looks:</strong> They have an awesome and distinctive look about them.</li>
+                <li><strong>Personality:</strong> They are shy and timid, but they are very curious creatures.</li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Armadillo Fan Page. All rights reserved.</p>
+    </footer>
+    <script>
+        function openTab(tabName) {
+            const tabContents = document.querySelectorAll('.tab-content');
+            const tabs = document.querySelectorAll('.tab');
+            tabContents.forEach(content => content.classList.remove('active'));
+            tabs.forEach(tab => tab.classList.remove('active'));
+            document.getElementById(tabName).classList.add('active');
+            document.querySelector(`[data-tab="${tabName}"]`).classList.add('active');
+        }
+    </script>
+</body>
+</html>
